@@ -368,6 +368,10 @@ namespace BetterJoyForCemu {
             mapForm.ShowDialog();
         }
 
+        private void button1_Click(object sender, EventArgs e) {
+            new XInputControllerTester().Show();
+        }
+
         private void CountDown(object sender, EventArgs e) {
             if (this.count == 0) {
                 this.console.Text = "Calibrating...";

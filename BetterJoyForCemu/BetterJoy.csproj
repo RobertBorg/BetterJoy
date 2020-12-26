@@ -119,6 +119,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="WindowsInput, Version=6.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\WindowsInput.6.1.0\lib\net461\WindowsInput.dll</HintPath>
     </Reference>
@@ -132,8 +133,20 @@
     </Compile>
     <Compile Include="Collections\ConcurrentList.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="ControllerTester\XInput\Api.cs" />
+    <Compile Include="ControllerTester\XInput\XInputBatteryInformation.cs" />
+    <Compile Include="ControllerTester\XInput\XInputCapabilities.cs" />
+    <Compile Include="ControllerTester\XInput\XInputGamepad.cs" />
+    <Compile Include="ControllerTester\XInput\XInputState.cs" />
+    <Compile Include="ControllerTester\XInput\XInputVIbration.cs" />
     <Compile Include="Controller\OutputControllerDualShock4.cs" />
     <Compile Include="Controller\OutputControllerXbox360.cs" />
+    <Compile Include="ControllerTester\XInput\XInputControllerTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControllerTester\XInput\XInputControllerTester.Designer.cs">
+      <DependentUpon>XInputControllerTester.cs</DependentUpon>
+    </Compile>
     <Compile Include="HIDapi.cs" />
     <Compile Include="Joycon.cs" />
     <Compile Include="MainForm.cs">
@@ -253,6 +266,9 @@
   <ItemGroup>
     <EmbeddedResource Include="3rdPartyControllers.resx">
       <DependentUpon>3rdPartyControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControllerTester\XInput\XInputControllerTester.resx">
+      <DependentUpon>XInputControllerTester.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
